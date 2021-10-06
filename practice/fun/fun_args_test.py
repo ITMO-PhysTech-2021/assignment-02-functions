@@ -27,7 +27,8 @@ def test_log_args(input_args, input_kwargs, output):
 @mark.parametrize(
     ['input_args', 'input_kwargs', 'output'],
     [
-
+        ([ [1, 2, 3, 4] ], { 'include': lambda x: x % 2 == 0 }, [2, 4]),
+        ([ [1, 2, 3, 4] ], { 'exclude': lambda x: x % 2 == 0 }, [1, 3])
     ]
 )
 # @formatter:on
