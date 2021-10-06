@@ -9,6 +9,6 @@ def rprint(a, depth=1, current_depth=0):
 
 
 # noinspection PyShadowingBuiltins
-def pretty_rprint(a, *args, print=lambda x: None, **kwargs):
+def pretty_rprint(a, print, current_depth=0):
     """Вывести массив, делая отступы, соответствующие уровню вложенности"""
     pass
