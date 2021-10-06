@@ -84,4 +84,4 @@ class Print:
         print(*args, **kwargs)
 
     def get(self):
-        return self.stream.getvalue()
+        return self.stream.getvalue().rstrip()

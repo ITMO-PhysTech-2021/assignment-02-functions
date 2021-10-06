@@ -3,12 +3,12 @@ def flatten(a):
     pass
 
 
-def rprint(a, depth=1):
+def rprint(a, depth=1, current_depth=0):
     """Вернуть строковое представление массива, обрезав его по глубине depth"""
     pass
 
 
 # noinspection PyShadowingBuiltins
-def pretty_rprint(a, print, *args, **kwargs):
+def pretty_rprint(a, *args, print=lambda x: None, **kwargs):
     """Вывести массив, делая отступы, соответствующие уровню вложенности"""
     pass
