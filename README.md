@@ -73,14 +73,20 @@ git remote add upstream git@github.com:ITMO-PhysTech-2021/assignment-02-function
 Чтобы синхронизировать историю коммитов, сразу после этого выполните
 
 ```shell
+git pull upstream
 git reset --hard upstream/main
-git pull upstream main
 git push --force origin main
 ```
 
 ## Процесс выполнения заданий
 
 Все условия находятся в файлах `_legend.md` в соответствующих папках `practice/TASKNAME` или `homework/TASKNAME`.
+
+**Важно:** перед тестированием любого задания подгрузите изменения из общего репозитория:
+
+```shell
+git pull upstream main
+```
 
 ### Практика
 
@@ -89,6 +95,13 @@ git push --force origin main
 
 ```shell
 git checkout -b practice
+```
+
+Протестировать задание можно запустив файл с тестами из PyCharm или запустив одну из следующих команд в терминале:
+
+```shell
+pytest practice/TASKNAME
+python -m pytest practice/TASKNAME
 ```
 
 Сделав какое-то задание, выполните команды, чтобы добавить изменения в Git, собрать их в один коммит и отправить на
@@ -123,6 +136,13 @@ git checkout -b hw
 
 ```shell
 git checkout -b hw main
+```
+
+Протестировать задание можно запустив файл с тестами из PyCharm или запустив одну из следующих команд в терминале:
+
+```shell
+pytest homework/TASKNAME
+python -m pytest homework/TASKNAME
 ```
 
 Сделав какое-то задание, выполните команды, чтобы добавить изменения в Git, собрать их в один коммит и отправить на
