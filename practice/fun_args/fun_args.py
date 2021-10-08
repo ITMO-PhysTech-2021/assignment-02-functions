@@ -1,4 +1,4 @@
-def log_args(*args, print, mode='list'):
+def log_args(*args, mode, print=print):
     """Вывести все переданные аргументы в требуемом режиме"""
     pass
 

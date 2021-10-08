@@ -18,9 +18,9 @@ def identity(n):
     """Вернуть число n, используя __recurrent"""
     return __recurrent(
         n,
-        lambda x: x == 0,
-        Ellipsis,
-        Ellipsis
+        stop_condition=lambda x: x == 0,
+        transform=Ellipsis,
+        value=Ellipsis
     )
 
 
@@ -28,22 +28,22 @@ def log2(n):
     """Вернуть округленный вниз двоичный логарифм n, используя __recurrent"""
     return __recurrent(
         n,
-        lambda x: x == 1,
-        Ellipsis,
-        Ellipsis
+        stop_condition=Ellipsis,
+        transform=Ellipsis,
+        value=Ellipsis
     )
 
 
 def push(n):
     """Вернуть массив, в котором единственное число 0 лежит на глубине n"""
 
-    def _depth(item):
+    def __depth(item):
         """Вернуть глубину вложенного массива item"""
         pass
 
     return __recurrent(
         n,
-        Ellipsis,
-        Ellipsis,
-        Ellipsis
+        stop_condition=Ellipsis,
+        transform=Ellipsis,
+        value=Ellipsis
     )
