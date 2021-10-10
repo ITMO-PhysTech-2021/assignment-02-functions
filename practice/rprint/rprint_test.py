@@ -1,6 +1,6 @@
 import rprint
 from pytest import mark
-from common.test_utils import CTEST, PTEST
+from common.test.run import CTEST, PTEST
 
 
 # @formatter:off
@@ -118,6 +118,8 @@ pretty_rprint_output = [
     6
 ]'''
 ]
+
+
 @mark.parametrize(
     ['input_args', 'output'],
     [

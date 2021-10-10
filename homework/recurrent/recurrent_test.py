@@ -1,6 +1,6 @@
-import fun_recurrent
+import recurrent
 from pytest import mark
-from common.test_utils import CTEST
+from common.test.run import CTEST
 
 
 # @formatter:off
@@ -19,7 +19,7 @@ from common.test_utils import CTEST
 )
 # @formatter:on
 def test_identity(input_args, output):
-    CTEST(fun_recurrent.identity, input_args, output)
+    CTEST(recurrent.identity, input_args, output)
 
 
 # @formatter:off
@@ -38,7 +38,7 @@ def test_identity(input_args, output):
 )
 # @formatter:on
 def test_log2(input_args, output):
-    CTEST(fun_recurrent.log2, input_args, output)
+    CTEST(recurrent.log2, input_args, output)
 
 
 # @formatter:off
@@ -57,4 +57,4 @@ def test_log2(input_args, output):
 )
 # @formatter:on
 def test_push(input_args, output):
-    CTEST(fun_recurrent.push, input_args, output)
+    CTEST(recurrent.push, input_args, output)

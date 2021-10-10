@@ -1,6 +1,6 @@
-import fun_args
+import args
 from pytest import mark
-from common.test_utils import CTEST, PTEST
+from common.test.run import CTEST, PTEST
 
 
 # @formatter:off
@@ -20,7 +20,7 @@ from common.test_utils import CTEST, PTEST
 )
 # @formatter:on
 def test_log_args(input_args, input_kwargs, output):
-    PTEST(fun_args.log_args, input_args, output, input_kwargs=input_kwargs)
+    PTEST(args.log_args, input_args, output, input_kwargs=input_kwargs)
 
 
 # @formatter:off
@@ -40,7 +40,7 @@ def test_log_args(input_args, input_kwargs, output):
 )
 # @formatter:on
 def test_smart_filter(input_args, input_kwargs, output):
-    CTEST(fun_args.smart_filter, input_args, output, input_kwargs=input_kwargs)
+    CTEST(args.smart_filter, input_args, output, input_kwargs=input_kwargs)
 
 
 # @formatter:off
@@ -61,4 +61,4 @@ def test_smart_filter(input_args, input_kwargs, output):
 )
 # @formatter:on
 def test_smart_map(input_args, input_kwargs, output):
-    CTEST(fun_args.smart_map, input_args, output, input_kwargs=input_kwargs)
+    CTEST(args.smart_map, input_args, output, input_kwargs=input_kwargs)
