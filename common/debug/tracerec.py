@@ -4,7 +4,7 @@ from typing import Callable, List, Any, Optional
 class __Counter:
     def __init__(self, base_indent: int):
         self.depth = 0
-        self.space = ' ' * base_indent
+        self.space = '|' + ' ' * (base_indent - 1)
 
     def __enter__(self):
         self.depth += 1
